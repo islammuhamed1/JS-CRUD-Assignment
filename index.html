@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-Assignment</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+    <h1 class="text-center mt-5">BookMarker</h1>
+    <div class="container">
+        <hr>
+        <div class="boobmarker-form my-5 py-3">
+            <h2 class="text-center">Bookmark your favorite sites</h2>
+            <div class="form mx-5 py-3">
+                <label class="text-center fw-bold">Site Name</label>
+                <input id="siteName" oninput="validation(this)" type="text" class="form-control" placeholder="Bookmark Name">
+            </div>
+            <div class="form mx-5">
+                <label class="text-center fw-bold">Site URL</label>
+                <input id="siteUrl" oninput="validation(this)" type="text" class="form-control" placeholder="  URL">
+                <div class="d-flex justify-content-center py-3">
+                    <button id="addBtn" onclick="addName()" class="btn btn-primary">Submit</button>
+                    <button id="btnUpdate" onclick="updateData()" class="btn btn-primary d-none">Update</button>
+                </div>
+            </div>
+            <input id="searchInput" onkeyup="search(this.value)" type="search" class="form-control w-50 mx-auto" placeholder="bookmark search">
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <div class="crud">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>URL</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableinfo">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
